@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Regis</title>
+  </head>
+  <body>
+    <!-- content -->
+    <div class="container">
+      <h1 class="text text-center mt-3">Welcome To Gratitude Journal</h1>
+      <hr />
+
+      <!-- card -->
+      <div
+        class="container h-100 d-flex align-items-center justify-content-center mt-5"
+      >
+        <div class="card" style="width: 70%">
+          <div class="card-body">
+            <h5 class="card-title text-center text mb-3">
+              Apa Manfaat Jurnal Rasa Syukur?
+            </h5>
+            <p class="card-text position-relative">
+              1. Meningkatkan kesadaran dan apresiasi terhadap berkat-berkat
+              dalam hidup kita.
+            </p>
+            <p>
+              2. Membantu kita untuk berfokus pada hal-hal positif dalam hidup,
+              dan memperbaiki suasana hati.
+            </p>
+            <p class="card-text position-relative">
+              3. Membantu memperkuat rasa syukur dan rasa bahagia yang dalam.
+            </p>
+            <p>
+              4. Membantu mengatasi stres dan masalah hidup dengan cara
+              memberikan pandangan yang lebih positif.
+            </p>
+            <p class="card-text position-relative">
+              5. Membantu meningkatkan kualitas hidup dan kebahagiaan secara
+              umum.
+            </p>
+            <p>
+              6. Membantu kita untuk mengembangkan spiritualitas dan
+              meningkatkan koneksi dengan Tuhan.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- card -->
+
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <!-- <button class="btn btn-dark buttonZaky" type="button">Buat</button> -->
+        <button
+          type="button"
+          class="btn btn-dark button-buat"
+          data-bs-toggle="modal"
+          data-bs-target="#buatModal"
+          data-bs-whatever="@mdo"
+        >
+          Buat
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="buatModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body color">
+            <!-- <form id="form-simpan"> -->
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label"
+                >Masukan Nomor Phonsel Anda:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="noHp"
+                placeholder="contoh: 0812345678910"
+              />
+            </div>
+          </div>
+          <!-- </form> -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="submit"
+              id="simpan"
+              onclick="simpan()"
+              class="btn btn-dark button-keseluruhan"
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- content -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

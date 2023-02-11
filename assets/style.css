@@ -1,0 +1,46 @@
+body {
+  background-color: #f6f1eb;
+}
+
+hr {
+  color: #b1ada8;
+}
+
+.text {
+  color: #a79078;
+  font-weight: bold;
+}
+
+p {
+  color: #a79078;
+  /* text-align: justify; */
+}
+
+.button-buat {
+  background-color: #6b5a48 !important;
+  margin-top: 10ch;
+  border-radius: 10px;
+}
+
+.button-keseluruhan {
+  background-color: #6b5a48 !important;
+}
+
+.color {
+  background-color: #f6f1eb;
+}
+
+.garis-active {
+  border: 2px solid #fd8c00;
+}
+
+.garis-disable {
+  border: 2px solid #b1ada8;
+}
+
+.field {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #b1ada8;
+}

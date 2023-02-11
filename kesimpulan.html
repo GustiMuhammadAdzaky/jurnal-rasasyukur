@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Regis</title>
+  </head>
+  <body>
+    <!-- content -->
+    <div class="container">
+      <!-- garis -->
+      <div class="container">
+        <div class="row">
+          <div class="col"><hr class="mt-5 garis-active" /></div>
+          <div class="col"><hr class="mt-5 garis-active" /></div>
+        </div>
+      </div>
+      <!-- garis -->
+
+      <!-- Tanggal -->
+      <div
+        id="tampil-tanggal"
+        class="text-center text"
+        style="color: #b1ada8"
+      ></div>
+      <!-- Tanggal -->
+
+      <!-- kesimpulan -->
+      <div class="container mt-5" style="background-color: white">
+        <h3 class="text-center text">Hasil Yang Anda Tulis</h3>
+
+        <!-- hasil -->
+        <p class="text" id="1">Hal Yang Membuat kamu Hariini Bahagia:</p>
+        <p id="bahagia"></p>
+        <p class="text" id="2">Hal Yang Membuat kamu Hariini Bersyukur:</p>
+        <p id="bersyukur"></p>
+        <p class="text" id="3">
+          hal yang dilakukan orang lain dan membuatku bersyukur:
+        </p>
+        <p id="oranglain"></p>
+        <p class="text" id="4">Rencana untuk esok hari :</p>
+        <p id="rencana"></p>
+        <p class="text" id="5">Apresiasi diri:</p>
+        <p id="apresiasi"></p>
+      </div>
+      <!-- kesimpulan -->
+
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <!-- <button class="btn btn-dark buttonZaky" type="button">Buat</button> -->
+        <button
+          type="submit"
+          onclick="waSimpan()"
+          class="btn btn-dark button-buat"
+        >
+          Simpan Di WhatApps
+        </button>
+      </div>
+    </div>
+    <!-- content -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // let url = 'https://www.example.com?name=n1&name=n2';
+      // let params = (new URL(url)).searchParams;x
+      // params.get('name') # => "n1"
+      // params.getAll('name') # => ["n1", "n2"]
+
+      let url = window.location.href;
+      let params = new URL(url).searchParams;
+      const noHp = params.get("noHp");
+      const bahagia = params.get("bahagia");
+      const bersyukur = params.get("bersyukur");
+      const oranglain = params.get("oranglain");
+      const rencana = params.get("rencana");
+      const apresiasi = params.get("apresiasi");
+
+      // attribut
+      const id1 = document.getElementById("1").innerText;
+      const id2 = document.getElementById("2").innerText;
+      const id3 = document.getElementById("3").innerText;
+      const id4 = document.getElementById("4").innerText;
+      const id5 = document.getElementById("5").innerText;
+
+      document.getElementById("bahagia").innerHTML = bahagia;
+      document.getElementById("bersyukur").innerHTML = bersyukur;
+      document.getElementById("oranglain").innerHTML = oranglain;
+      document.getElementById("rencana").innerHTML = rencana;
+      document.getElementById("apresiasi").innerHTML = apresiasi;
+
+      function waSimpan() {
+        const urlWa = `https://wa.me/${noHp}?text=*${id1}*${bahagia}%20%20%20,*${id2}*${bersyukur}%20%20%20,*${id3}*${oranglain}%20%20%20,*${id4}*${rencana}%20%20%20,*${id5}*${rencana}%20%20%20,`;
+        location.href = urlWa;
+      }
+    </script>
+  </body>
+</html>
