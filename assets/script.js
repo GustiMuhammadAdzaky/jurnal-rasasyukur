@@ -1,7 +1,9 @@
 // halaman
 const halamanIndex = "http://127.0.0.1:5500/index.html";
-const halamanbahagia = "http://127.0.0.1:5500/bahagia.html";
-const halamanKesimpulan = "http://127.0.0.1:5500/kesimpulan.html";
+const halamanbahagia =
+  "https://gustimuhammadadzaky.github.io/jurnal-rasasyukur/bahagia.html";
+const halamanKesimpulan =
+  "https://gustimuhammadadzaky.github.io/jurnal-rasasyukur/kesimpulan.html";
 
 // modalBuat halaman index
 function simpan() {
